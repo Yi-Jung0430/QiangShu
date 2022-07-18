@@ -1,0 +1,762 @@
+/*
+適合版本:koha_21.05
+*/
+/* 
+強恕高中koha
+*/
+/* 
+copy 敏實code
+*/
+/* ------------- 覆蓋 opac_20.0515000.css ------------- */
+/*更新為黑色Logo -- 開始*/
+#logo {
+    background: transparent url(/opac-tmpl/bootstrap/images/koha-logo-navbar-black.png) no-repeat scroll 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #logo {
+        background: transparent url(/opac-tmpl/bootstrap/lib/bootstrap/img/glyphicons-halflings.png) no-repeat;
+        background-position: 0 -24px;
+    }
+}
+
+/*更新為黑色Logo -- 結束*/
+
+/*更新主色 -- 開始*/
+.navbar .nav li.dropdown>a:focus .caret,
+.navbar .nav li.dropdown>a:hover .caret {
+    border-bottom-color: #0D5399;
+    border-top-color: #0D5399;
+}
+
+.navbar-inverse .navbar-inner li>a:focus,
+.navbar-inverse .navbar-inner li>a:hover {
+    color: #0D5399;
+}
+
+.navbar-inverse .navbar-inner li.dropdown>a:focus .caret,
+.navbar-inverse .navbar-inner li.dropdown>a:hover .caret {
+    border-bottom-color: #0D5399;
+    border-top-color: #0D5399;
+}
+
+.navbar-inverse .navbar-inner li.dropdown.open>.dropdown-toggle {
+    color: #0D5399;
+}
+
+.navbar-inverse .navbar-inner li.dropdown.open>.dropdown-toggle .caret,
+.navbar-inverse .navbar-inner li.dropdown.open>.dropdown-toggle .caret:hover {
+    border-bottom-color: #0D5399;
+    border-top-color: #0D5399;
+    color: #fff;
+}
+
+#i18nMenu li a:hover {
+    color: #0D5399;
+}
+
+a.login-link.loginModal-trigger {
+    color: #0D5399;
+}
+
+#basketcount span {
+    background-color: #0D5399;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:visited {
+    background-color: #0D5399;
+    background-image: linear-gradient(180deg, #0D5399, #0c4781);
+}
+
+input[type=password]:focus,
+input[type=text]:focus {
+    border-color: #0D5399;
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background: #0D5399 none;
+}
+
+/*更新主色 -- 結束*/
+
+/*更新次色 -- 開始*/
+#loginModal input[type=submit]:hover {
+    background: #0c4781 none
+}
+
+/*更新次色 -- 結束*/
+
+/*更新底色 -- 開始*/
+body {
+    background: #fff;
+}
+
+.navbar .divider-vertical {
+    border-left-color: #fff;
+    border-right-color: #fff;
+}
+
+.navbar-inverse .navbar-inner {
+    background: #fff none;
+    border-color: #fff;
+}
+
+.navbar-inner {
+    background: #fff none;
+}
+
+#opacheader {
+    background-color: #fff;
+}
+
+/*更新底色 -- 結束*/
+
+/*h1~h5 -- 開始*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.5em;
+    color: #727272;
+}
+
+h1 {
+    font-size: 120%;
+}
+
+h2 {
+    font-size: 115%;
+}
+
+h3 {
+    font-size: 110%;
+}
+
+h4 {
+    font-size: 105%;
+}
+
+h5 {
+    font-size: 100%;
+}
+
+/*h1~h5 -- 結束*/
+
+/*<legend>的margin-bottom太高 -- 開始*/
+legend {
+    margin-bottom: 10px;
+}
+
+/*<legend>的margin-bottom太高 -- 結束*/
+
+/*fa圖示大小改為清楚的14px -- 開始*/
+i.fa {
+    font-size: 14px;
+}
+
+/*fa圖示大小改為清楚的14px -- 結束*/
+
+/*登入輸入框太大*/
+#loginModal input {
+    font-size: 100%;
+}
+
+/*除臭 -- 頁頭設計*/
+@media only screen and (max-width: 608px) {
+
+    #opac-main-search .input-append,
+    #opac-main-search .librarypulldown .transl1,
+    #opac-main-search button,
+    #opac-main-search input,
+    #opac-main-search select {
+        width: 100%;
+    }
+}
+
+/*除臭 -- 技術支援 koha*/
+#koha_url p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 979px) {
+    .navbar-fixed-bottom {
+        margin-top: 50px;
+    }
+}
+
+/*主內容的外框需移除*/
+.main {
+    border: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .main {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/* ------------- 自訂css ------------- */
+/*內容寬度可順便指定最大值*/
+#wrap {
+    max-width: 1200px;
+}
+
+/*首頁grid-template -- 開始*/
+/*
+#opac-main .main .row-fluid {
+	background: #f00;
+	display: grid;
+	grid-template-columns:200px calc(100% - 200px);
+	grid-template-areas: "span2 span7" "span2 span3";
+}
+#opac-main .main .row-fluid .span2{
+	grid-area: span2;
+	width:auto;
+}
+#opac-main .main .row-fluid .span7{
+	grid-area: span7;
+	width:auto;
+}
+#opac-main .main .row-fluid .span3{
+	grid-area: span3;
+	width:auto;
+}
+*/
+/*首頁grid-template -- 結束*/
+
+
+body {
+    font-size: 15px;
+}
+
+
+
+
+/*頁頭設計*/
+#opac-main-search {
+    position: relative;
+    overflow: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 440px) {
+    #opac-main-search {
+        border-radius: 0;
+    }
+}
+
+#opac-main-search .mastheadsearch {
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 700px;
+}
+
+#opac-main-search .mastheadsearch label {
+    display: none;
+}
+
+#opac-main-search .mastheadsearch select,
+#opac-main-search .mastheadsearch input[type="text"],
+#opac-main-search .mastheadsearch button[type="submit"] {
+    box-shadow: none;
+    border-color: #135497;
+}
+
+ #moresearches {
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/*頁頭設計 - 背景設計*/
+#opac-main-search:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+
+    background-image: url(https://lib.mitust.edu.tw/var/file/13/1013/img/27/sIMG_0069.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    opacity: 0.15;
+    filter: grayscale(100%);
+}
+
+#opac-main-search .span12 {
+    position: relative;
+}
+
+body#opac-main #opac-main-search:before {
+    display: none;
+}
+
+
+/*頁頭設計 - 自訂LOGO*/
+#opac-main-search .custom_logo {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#opac-main-search .custom_logo img {
+    height: 50px;
+    mix-blend-mode: darken;
+}
+
+/*頁尾設計*/
+.row-fluid>#opaccredits {
+    background: rgb(246, 246, 246);
+    background: linear-gradient(45deg, rgba(246, 246, 246, 1) 0%, rgba(225, 225, 225, 1) 50%, rgba(241, 241, 241, 1) 50%, rgba(246, 246, 246, 1) 100%);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.row-fluid>#opaccredits .breadcrumb {
+    font-size: 14px;
+    background: transparent;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.row-fluid>#opaccredits .breadcrumb>li {
+    text-shadow: none;
+}
+
+.row-fluid>#opaccredits .breadcrumb>li a {
+    text-decoration: none;
+}
+
+.row-fluid>#opaccredits .breadcrumb>li>.divider {
+    color: #333;
+}
+
+/*首頁主內容背景*/
+body#opac-main .main {
+    position: relative;
+    margin: 0 20px 10px 20px;
+    padding: 50px;
+}
+
+/* body#opac-main .main:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+
+    background-image: url(https://i.imgur.com/QdNAIVB.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 50% 0%;
+    opacity: 0.2;
+    filter: grayscale(100%);
+
+    border-radius: 10px;
+} */
+
+@media (max-width: 768px) {
+    body#opac-main .main {
+        padding: 20px;
+    }
+}
+
+
+
+/*首頁-主內容區塊*/
+body#opac-main .main .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*首頁-主內容區塊-未登入*/
+/* body#opac-main .main #notloggedin{
+	
+} */
+
+/*首頁-主內容區塊-已登入*/
+/* body#opac-main .main #loggedin{
+	
+} */
+
+body#opac-main .main #notloggedin,
+body#opac-main .main #loggedin {
+    background: rgba(200, 220, 220, 0.7);
+    position: relative;
+}
+
+body#opac-main .main #notloggedin .row-fluid,
+body#opac-main .main #loggedin .row-fluid {
+    display: flex;
+}
+
+body#opac-main .main .span9,
+body#opac-main .main .span3 {
+    position: relative;
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 20px;
+}
+
+body#opac-main .main .span3 {
+    flex: 1 0 260px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+
+    body#opac-main .main #notloggedin .row-fluid,
+    body#opac-main .main #loggedin .row-fluid {
+        display: block;
+    }
+}
+
+/*最新消息*/
+#news.newscontainer {
+    border: none;
+}
+
+#news {
+    padding: 0;
+    margin: 0;
+}
+
+#news .newsitem {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #727272;
+}
+
+#news .newsitem:last-child {
+    border-bottom: none;
+}
+
+#news .newsitem .newsheader {
+    position: relative;
+    padding: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: right;
+}
+
+#news .newsitem .newsheader a {
+    pointer-events: none;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0;
+    color: #188181;
+    text-align: left;
+}
+
+#news .newsitem .newsheader a:hover {
+    color: #ff5500 !important;
+}
+
+#news .newsitem .newsheader a div {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#news .newsitem .newsbody {
+    padding: 0;
+    color: #333;
+}
+
+#news .newsitem .newsfooter {
+    display: none;
+}
+
+#news #rssnews-container {
+    display: none;
+}
+
+
+/*以您的帳號登入：*/
+/* #login{
+	
+} */
+#login legend {
+    font-size: 16px;
+    font-weight: normal;
+    color: #135497;
+    border-bottom: 1px dashed #135497;
+
+}
+
+#login input[type="text"],
+#login input[type="password"],
+#login input[type="submit"] {
+    width: -webkit-fill-available;
+}
+
+#login input[type="submit"] {
+    background: #135497;
+    color: #fff;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-shadow: none;
+}
+
+#login fieldset.action {
+    padding-top: 10px;
+}
+
+
+
+/*版權聲明*/
+.info_box {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #666;
+    margin: 10px 0 0 0;
+}
+
+.info_box span {
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #888;
+}
+
+.info_box span:last-child {
+    border-right: none;
+}
+
+.copyright_box {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #666;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .info_box {
+        text-align: center;
+    }
+
+    .info_box span {
+        display: block;
+        padding: 0;
+        border-right: none;
+    }
+
+    .copyright_box {
+        text-align: center;
+    }
+}
+
+/* 
+===============================
+2022/07/18
+新增強恕 koha code
+===============================
+*/
+
+/* 
+位置:最上方的小header 
+路徑:直接修改 Css
+*/
+nav.navbar.navbar-expand {
+    border-bottom: 1px solid rgb(184, 184, 184);
+    margin-bottom: 16px;
+}
+
+/* 
+位置:opacheader 
+路徑:首頁/工具/最新消息/編輯最新消息
+*/
+
+/* 縮小強恕高中的 logo */
+.custom_logo img {
+    max-width: 350px;
+}
+
+/* 將背景改成透明，避免切到綠色球 */
+#opacheader {
+    background-color: #fff0;
+}
+
+/* 將系統預設的搜尋框縮短並置中 */
+#opac-main-search {
+    max-width: 60%;
+    margin: 16px auto 16px auto;
+}
+
+/* 
+位置: id="moresearches" (搜尋框下方的標籤)
+路徑:直接修改 css
+*/
+/* 將搜尋框下面的標籤置中 */
+#moresearches {
+    margin: 0.5em auto;
+}
+
+/* 預設有四項，拿掉"權威搜尋"與"標籤雲" */
+ul#moresearches li:nth-child(2),
+ul#moresearches li:nth-child(3) {
+    display: none;
+}
+
+/* 
+位置:id="navigation"
+路徑:直接修改 css
+頁面位置: 中間內容大區塊
+*/
+/* 將左側空欄位的預設寬度拿掉 */
+#notloggedin>.row>.order-3 {
+    display: none;
+}
+
+/* 增加上下間距 */
+#notloggedin>.row {
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* 改變背景遮罩顏色 */
+body#opac-main .main #notloggedin, body#opac-main .main #loggedin {
+    background: rgb(255 255 255 / 70%);
+    position: relative;
+}
+
+/* 新增背景區塊的背景色 */
+#login {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 40px 16px;
+    height: 100%;
+    border: 2px solid #d8f0b7
+}
+
+/* 增加 iocn */
+#login legend {
+    padding-left: 34px;
+    background-repeat: no-repeat;
+    background-image: url(https://i.imgur.com/pR5EdyR.png);
+    background-position: 0 -4px;
+    background-size: contain;
+
+}
+
+#login legend {
+    border-bottom: 0px dashed #135497;
+}
+
+/* 更新中間區塊的背景圖片 */
+body#opac-main .main:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    /* 第一張背景圖 */
+    /* background-image: url(https://i.imgur.com/QdNAIVB.jpg); */
+    /* 第二張背景圖 */
+    /* background-image: url(https://i.imgur.com/1kIYm6l.jpg); */
+    /* 第三張背景圖 */
+    /* background-image: url(https://i.imgur.com/4tvDBtR.jpg); */
+    /* 第四張背景圖 */
+    background-image: url(https://i.imgur.com/sgOkoqf.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 50% 0%;
+    opacity: 0.3;
+    /* filter: grayscale(100%); */
+}
+
+@media (max-width: 768px) {
+    body#opac-main .main {
+        padding: 20px;
+    }
+}
+
+/* 為公告標題新增綠色背景線 */
+#news .newsitem .newsheader > a {
+    
+    margin-bottom: 10px;
+    padding: 0 20px;
+    background-image: linear-gradient(rgba(0,0,0,0) 0%,#d8f0b7 0);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
+    color: #187200;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* 最下層背景的綠色球 */
+/* #wrapper {
+    padding-right: 40px;
+    background: url(https://i.imgur.com/j3HFgLt.jpg);
+    background-size: cover;
+} */
+
+
+/* footer 設計， copy 阿章設計的樣式，但因版本不同，更新 class name */
+/*頁尾設計*/
+#opaccredits {
+    background: rgb(246, 246, 246);
+    background: linear-gradient(45deg, rgba(246, 246, 246, 1) 0%, rgba(225, 225, 225, 1) 50%, rgba(241, 241, 241, 1) 50%, rgba(246, 246, 246, 1) 100%);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#opaccredits .breadcrumb {
+    font-size: 14px;
+    background: transparent;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#opaccredits .breadcrumb>li {
+    text-shadow: none;
+}
+
+#opaccredits .breadcrumb>li a {
+    text-decoration: none;
+}
+
+#opaccredits .breadcrumb>li>.divider {
+    color: #333;
+}
+
+/* 把原本的 boder right 拿掉 */
+.info_box span {
+    padding-left:4px;
+    padding-right: 0;
+    border-right: 0px solid #888;
+}
