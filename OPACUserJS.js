@@ -60,5 +60,13 @@ $(document).ready(function(){
 });
 //最新消息的出版日期移到標題內 -- 結束
 
-// ========== 2022/07/08 新增 ======================
+// ========== 2022/07/22 新增 ======================
+// 把 #login 拿掉
+$(document).ready(function(){
+	$("#login").remove();
+});
 
+// 把 #notloggedin 拿掉
+$(document).ready(function(){
+	$("#notloggedin").remove();
+});

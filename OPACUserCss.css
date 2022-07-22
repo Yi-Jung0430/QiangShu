@@ -685,7 +685,9 @@ body#opac-main .main:before {
     /* 第三張背景圖 */
     /* background-image: url(https://i.imgur.com/4tvDBtR.jpg); */
     /* 第四張背景圖 */
-    background-image: url(https://i.imgur.com/sgOkoqf.jpg);
+    /* background-image: url(https://i.imgur.com/sgOkoqf.jpg); */
+    /* 第五張背景圖(第四張的剪裁後) */
+    background-image: url(https://i.imgur.com/aPGpf7T.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: 50% 0%;
@@ -759,4 +761,10 @@ body#opac-main .main:before {
     padding-left:4px;
     padding-right: 0;
     border-right: 0px solid #888;
+}
+
+/* 修改進階搜尋等顏色 */
+a:link, a:visited {
+    color: #000;
+    font-weight: bolder;
 }
