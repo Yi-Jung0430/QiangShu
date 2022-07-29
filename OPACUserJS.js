@@ -33,9 +33,10 @@ $(document).ready(function(){
     $("#opac-main-search").remove();
     $("#moresearches").remove();
 	// $(".main").prepend('<div class="container-fluid"><div class="row">' + html1 + html2 + html3 + '</div></div></div>');
-    $(".main").prepend( '<ul id="moresearches">'+ html3  +'</ul>');
+    
     $(".main").prepend( '<div id="opac-main-search">'+ html2  +'</div>');
     $(".main").prepend( '<div id="opacheader">'+ html1  +'</div>');
+	$("#opac-main-search").append( '<ul id="moresearches">'+ html3  +'</ul>');
 });
 //首頁把頁頭移到主內容裡 -- 結束
 
@@ -67,6 +68,16 @@ $(document).ready(function(){
 });
 
 // 把 #notloggedin 拿掉
+// $(document).ready(function(){
+// 	$("#notloggedin").remove();
+// });
+
+// 把右上方的"以你的帳號登入" 移除
 $(document).ready(function(){
-	$("#notloggedin").remove();
+	$("#members > .dropdown").remove();
+});
+
+// 把左上方的"虛擬書架>登入才能新增您的虛擬書架" 移除
+$(document).ready(function(){
+	$("a[href='/cgi-bin/koha/opac-shelves.pl?op=add_form']").remove();
 });

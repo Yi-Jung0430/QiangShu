@@ -276,7 +276,7 @@ body {
     border-color: #135497;
 }
 
- #moresearches {
+#moresearches {
     text-align: center;
     font-size: 16px;
 }
@@ -597,6 +597,32 @@ nav.navbar.navbar-expand {
     max-width: 350px;
 }
 
+.logo-text {
+    text-align: center;
+    color: #000;
+    font-size: 200%;
+}
+
+.logo-img {
+    width: 400px;
+}
+
+@media (max-width: 560px) {
+    .logo-img {
+        width: 200px;
+    }
+
+    .logo-text {
+        text-align: center;
+        color: #000;
+        font-size: 100%;
+    }
+}
+
+.logo {
+    text-align: center
+}
+
 /* 將背景改成透明，避免切到綠色球 */
 #opacheader {
     background-color: #fff0;
@@ -607,6 +633,15 @@ nav.navbar.navbar-expand {
     max-width: 60%;
     margin: 16px auto 16px auto;
 }
+
+@media (max-width: 1000px) {
+    #opac-main-search {
+        max-width: 80%;
+        margin: 16px auto 16px auto;
+    }
+}
+
+
 
 /* 
 位置: id="moresearches" (搜尋框下方的標籤)
@@ -641,7 +676,8 @@ ul#moresearches li:nth-child(3) {
 }
 
 /* 改變背景遮罩顏色 */
-body#opac-main .main #notloggedin, body#opac-main .main #loggedin {
+body#opac-main .main #notloggedin,
+body#opac-main .main #loggedin {
     background: rgb(255 255 255 / 70%);
     position: relative;
 }
@@ -702,11 +738,11 @@ body#opac-main .main:before {
 }
 
 /* 為公告標題新增綠色背景線 */
-#news .newsitem .newsheader > a {
-    
+#news .newsitem .newsheader>a {
+
     margin-bottom: 10px;
     padding: 0 20px;
-    background-image: linear-gradient(rgba(0,0,0,0) 0%,#d8f0b7 0);
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #d8f0b7 0);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -758,13 +794,44 @@ body#opac-main .main:before {
 
 /* 把原本的 boder right 拿掉 */
 .info_box span {
-    padding-left:4px;
+    padding-left: 4px;
     padding-right: 0;
     border-right: 0px solid #888;
 }
 
 /* 修改進階搜尋等顏色 */
-a:link, a:visited {
+a:link,
+a:visited {
     color: #000;
     font-weight: bolder;
+}
+
+/* 把中間訊息公告區寬度提高 */
+#notloggedin .col-lg-7 {
+    flex: 0 0 83.333%;
+    max-width: 83.333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* footer 的文字樣式 */
+.footer-text {
+    font-family: roboto, 'Open Sans', Arial, Helvetica, 微軟正黑體,
+        'Microsoft JhengHei', 新細明體, Verdana, sans-serif;
+    font-size: 14.4px;
+    letter-spacing: 0.72px;
+    color: #000;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .footer-text {
+        font-family: roboto, 'Open Sans', Arial, Helvetica, 微軟正黑體,
+            'Microsoft JhengHei', 新細明體, Verdana, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.72px;
+        color: #000;
+    }
 }
